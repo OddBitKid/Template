@@ -50,7 +50,7 @@
         "description": "The Windows version for the VM. This will pick a fully patched image of this given Windows version. Allowed values: 2008-R2-SP1, 2012-Datacenter, 2012-R2-Datacenter."
       }
     },
-    "sizeOfDataDiskInGB": {
+    "sizeOfEachDataDiskInGB": {
       "type": "string",
       "metadata": {
         "description": "Size of each data disk in BG"
@@ -181,7 +181,7 @@
           "dataDisks": [
             {
               "name": "datadisk1",
-              "diskSizeGB": "[parameters('sizeOfDiskInGB')]",
+              "diskSizeGB": "[parameters('sizeOfEachDiskInGB')]",
               "lun": 0,
               "vhd": {
                 "uri": "[variables('dataDisk1VhdName')]"
